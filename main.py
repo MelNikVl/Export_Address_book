@@ -24,7 +24,7 @@ def clean_string(s):
 
 def get_global_catalog_users():
     # Параметры подключения
-    gc_server = "xyz.int"  # Глобальный каталог
+    gc_server = "------"  # Глобальный каталог (как пример xyz.int)
     base_dn = ""  # Для глобального каталога можно оставить пустым
     
     # Учетные данные
@@ -32,8 +32,8 @@ def get_global_catalog_users():
     password = "------"   # Пароль
     domain = "-----"           # Домен (как пример xyz.int)
     
-    # Фильтр LDAP
-    ldap_filter = "(&(objectCategory=person)(objectClass=user)(mail=*@salutkbf.kz))"
+    # Фильтр LDAP (как пример - @salutkbf.kz)
+    ldap_filter = "(&(objectCategory=person)(objectClass=user)(mail=*--------))"
     
     # Атрибуты для получения
     attributes = ["name", "mail"]
